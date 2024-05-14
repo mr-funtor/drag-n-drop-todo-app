@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="./styles.css" rel="stylesheet"/>
+</head>
+<body>
+  <main>
+    <div id="gradient-background"></div>
+
+    <div id="app-container">
+      <section id="creation-area">
+        <div id="todo-summary">
+          <h2 id="completed-track">
+            <span id="comp-todos-length">1</span> /
+            <span id="todos-length">3</span>
+          </h2>
+          <h2>Todo Completed</h2>
+        </div>
+
+        <div id="adding-area">
+          <input id="adding-input" placeholder="new todo" />
+          <button id="adding-btn">Add</button>
+        </div>
+      </section>
+
+      <div id="todos-container">
+        <section class="uncompleted-section">
+          <!-- <div id="single-todo" draggable="true">
+            <div id="completed-box">
+              <p>Walk the park</p>
+              <button id="single-edit">Edit</button>
+              <button id="single-delete">Delete</button>
+            </div>
+
+            <div id="completed-seal">
+              <button id="seal-delete">Delete</button>
+            </div>
+          </div> -->
+        </section>
+
+        <section class="completed-section">
+          <!-- <div id="single-todo">
+            <div id="completed-box">
+              <p>Walk the park</p>
+              <button id="single-edit">Edit</button>
+              <button id="single-delete">Delete</button>
+            </div>
+
+            <div id="completed-seal">
+              <button id="seal-delete">Delete</button>
+            </div>
+          </div> -->
+        </section>
+      </div>
+    </div>
+
+    <section class="edit-modal closed">
+      <input id="edit-input"/>
+    </section>
+  </main>
+  
+  <script src="./main.js"></script>
+</body>
+</html>

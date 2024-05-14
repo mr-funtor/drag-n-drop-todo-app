@@ -1,0 +1,173 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main{
+  position: relative;
+  height: 100vh;
+}
+
+#gradient-background{
+  position: absolute;
+  height: 35%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, aqua 15%, blue);
+  border-radius: 0 0 30px 30px;
+  z-index: -1;
+}
+
+#app-container{
+  --space: 30px;
+  width: 650px;
+  margin: auto;
+  height: 100%;
+  padding-top: var(--space);
+}
+
+#creation-area{
+  height: 100px;
+  width: 100%;
+  margin-bottom: var(--space);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#todo-summary{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#completed-track{
+  height: 55px;
+  width: 55px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  mix-blend-mode: multiply;
+}
+
+#adding-area{
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#adding-input{
+  height: 100%;
+  width: 88%;
+  padding: 0 15px;
+  border-radius: 5px;
+  border: none;
+}
+
+#adding-btn{
+  display: block;
+  height: 100%;
+  flex: .9;
+  border-radius: 5px;
+  border: none;
+}
+
+#todos-container{
+  display: flex;
+  justify-content: space-between;
+  height: 78%;
+  width: 100%;
+}
+
+.uncompleted-section, .completed-section{
+  height: 100%;
+  width: 45%;
+  padding: 13px 10px;
+  background-color: rgb(46,46,46);
+  border-radius: 15px;
+}
+
+.uncompleted-section.hovering, .completed-section.hovering{
+  background-color: darkgray;
+}
+
+#single-todo{
+  position: relative;
+  background: rgb(142, 234, 234);
+  margin-bottom: 15px;
+  border-radius: 5px;
+  height: 50px;
+}
+
+#completed-box{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 7px;
+}
+
+#completed-box>p{
+  flex: 1;
+}
+
+#single-edit, #single-delete, #seal-delete{
+  display: block;
+  height: 30px;
+  padding: 0 10px;
+}
+
+#single-edit{
+  margin-right: 5px;
+}
+
+.completed-section #single-edit{
+  display: none;
+}
+
+#completed-seal{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: none;
+}
+
+.completed-section #completed-seal{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 7px 7px;
+}
+
+.edit-modal{
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-modal.closed{
+  display: none;
+}
+
+#edit-input{
+  width: 50%;
+  height: 40px;
+
+  padding: 0 15px;
+  border-radius: 5px;
+  border: none;
+}
